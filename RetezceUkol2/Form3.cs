@@ -17,10 +17,11 @@ namespace RetezceUkol2
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-
+        string heslo;
         private void button1_Click(object sender, EventArgs e)
         {
             char [] vstup=textBox1.Text.ToCharArray();
+            heslo = textBox1.Text;
             int hodnota =Convert.ToInt32( numericUpDown1.Value);
             string zaheslovani = "";
             char znak='A';
@@ -57,6 +58,7 @@ namespace RetezceUkol2
                     else zaheslovani = zaheslovani+Convert.ToString(c);
                 }
             }
+            textBox1.Clear();
             textBox2.Text = zaheslovani;
         }
 
@@ -67,7 +69,7 @@ namespace RetezceUkol2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox2.Text = textBox1.Text;
+            textBox2.Text = heslo;
         }
 
         private void button4_Click(object sender, EventArgs e)
