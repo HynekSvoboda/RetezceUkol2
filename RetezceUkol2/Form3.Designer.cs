@@ -86,9 +86,9 @@
             this.textBox2.Enabled = false;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(322, 106);
+            this.textBox2.Location = new System.Drawing.Point(321, 106);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 26);
+            this.textBox2.Size = new System.Drawing.Size(270, 26);
             this.textBox2.TabIndex = 3;
             // 
             // button2
@@ -118,22 +118,22 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 69);
+            this.label1.Location = new System.Drawing.Point(6, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 20);
+            this.label1.Size = new System.Drawing.Size(296, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Zadej své heslo pro šifraci:";
+            this.label1.Text = "Zadej své heslo pro šifraci/dešifraci:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(318, 69);
+            this.label2.Location = new System.Drawing.Point(317, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 20);
+            this.label2.Size = new System.Drawing.Size(283, 20);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Zašifrované tvé heslo:";
+            this.label2.Text = "Zašifrované/odšifrované tvé heslo:";
             // 
             // label3
             // 
@@ -173,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(565, 366);
+            this.ClientSize = new System.Drawing.Size(603, 366);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);

@@ -17,11 +17,9 @@ namespace RetezceUkol2
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
-        string heslo;
         private void button1_Click(object sender, EventArgs e)
         {
             char [] vstup=textBox1.Text.ToCharArray();
-            heslo = textBox1.Text;
             int hodnota =Convert.ToInt32( numericUpDown1.Value);
             string zaheslovani = "";
             char znak='A';
@@ -58,7 +56,6 @@ namespace RetezceUkol2
                     else zaheslovani = zaheslovani+Convert.ToString(c);
                 }
             }
-            textBox1.Clear();
             textBox2.Text = zaheslovani;
         }
 
@@ -66,12 +63,44 @@ namespace RetezceUkol2
         {
             MessageBox.Show("2. Vytvořte projekt na šifrování vstupního textu pomocí Cézarovy šifry.\nŠifrování textu spočívá v posouvání znaku v abecedě o určitý, pevně stanovený počet znaků.\nNapříklad slovo \"ahoj\"; se s posunem textu o 1 přeloží jako \"bipk\".\nPosun umožníme uživateli vybrat.\nPosun se bude provádět v rozsahu písmen anglické abecedy.\nBudou se šifrovat velká a malá písmena anglické abecedy.\nOstatní znaky budou beze změny.\nPísmeno z při posunu o 1 přejde do písmene a.\nUmožněte text odšifrovat.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox2.Text = heslo;
-        }
+            string vstup = textBox1.Text;
+            char[] text = vstup.ToCharArray();
+            int hodnota = Convert.ToInt32(numericUpDown1.Value);
 
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text[i] >= 'a' && text[i] <= 'z')
+                {
+                    if (text[i] - hodnota >= 'a')
+                    {
+                        text[i] = (char)((int)text[i] - hodnota);
+                    }
+                    else
+                    {
+                        text[i] = (char)((int)text[i] - hodnota + 26);
+                    }
+                }
+                else
+                {
+                    if (text[i] >= 'A' && text[i] <= 'Z')
+                    {
+                        if (text[i] - hodnota >= 'A')
+                        {
+                            text[i] = (char)((int)text[i] - hodnota);
+                        }
+                        else
+                        {
+                            text[i] = (char)((int)text[i] - hodnota + 26);
+                        }
+                    }
+                    else text[i] = text[i];
+                }
+            }
+            string vystup = new string(text);
+            textBox2.Text = vystup;
+        }
         private void button4_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(1);
